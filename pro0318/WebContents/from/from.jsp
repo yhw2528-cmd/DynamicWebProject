@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+from.jsp에서 출력된 부분입니다:<br>
+<%
+	request.setCharacterEncoding("utf-8");
+	String userName=request.getParameter("userName");
+	String userId=request.getParameter("userId");
+	request.setAttribute("userName", "크리스탈");
+	request.setAttribute("userId","lsj love");
+	
+%>
+<jsp:forward page="/to/to.jsp"/>
+</body>
+</html>

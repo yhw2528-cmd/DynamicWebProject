@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%= request.getParameter("customer") %>님, 
+짜장면을 <%= request.getParameter("amount")%> 그릇 주문하셨군요.맛있게 드세요 <br><hr><br>
+<img alt="짜장면" src="/pro0324/images/짜장면.webp" width="200" height="200">
+</body>
+</html>
