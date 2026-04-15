@@ -20,6 +20,8 @@ public class CookieBox {
         }
     }
     
+    
+    //throw IOException 오류 날수도 있다
     public static Cookie createCookie(String name, String value)
     throws IOException {
         return new Cookie(name, URLEncoder.encode(value, "utf-8"));

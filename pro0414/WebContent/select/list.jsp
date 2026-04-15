@@ -25,7 +25,7 @@
 %>
 <table border="1">
 <tr><th>아이디</th><th>도서명</th><th>저자</th><th>가격</th><th>출판일</th><th>이미지</th>
-<th>아이디</th>
+<th>수정</th>
 </tr>
 <%
 	for(Book book:list){
@@ -40,6 +40,9 @@
 <img src="/pro0414/images/<%= book.getBookImage() %>" width="70" height="100">
 </a>
     
+</td>
+<td>
+<button type="button" onclick="location.href='/pro0414/update/input.jsp?bookId=<%=book.getBookId() %>'">수정</button>
 </td>
 <td><%= book.getBookId() %></td> 
 </tr>

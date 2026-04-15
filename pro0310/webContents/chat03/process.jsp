@@ -41,11 +41,11 @@
 %>
 <br>사용자 전공:<%=major %> <br>
 <% 
-	Enumeration<String> paramNames = request.getParameterNames();
-
-	while(paramNames.hasMoreElements()){
-    	String paramName = paramNames.nextElement();
-    	out.print(paramNames+"<br>");
+	Enumeration<String> paramNames = request.getParameterNames();// 모든 이름들을 가져옴
+	//Enumeration=데이터를 하나씩 꺼내기 위한 반복 도구(하나씩 꺼내는 함수)
+	while(paramNames.hasMoreElements()){//hasMoreElements 더 꺼낼 게 남아있는지 확인
+    	String paramName = paramNames.nextElement(); //nextElement 다음 꺼 하나 꺼냄
+    	out.print(paramName+"<br>");
 }
 %>
 </body>

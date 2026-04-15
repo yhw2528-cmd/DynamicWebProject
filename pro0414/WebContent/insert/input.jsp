@@ -14,5 +14,6 @@
 가격:<input type="text" name="price" size="10">
 책이미지:<input type="text" name="bookImage" size="10">
 <input type="submit" value="입력">
+</form>
 </body>
 </html>

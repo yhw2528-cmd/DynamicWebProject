@@ -14,10 +14,11 @@
    String bookName = request.getParameter("bookName");
    String author = request.getParameter("author");
    
-   String urlBookName = URLEncoder.encode(bookName, "utf-8");
+   String urlBookName = URLEncoder.encode(bookName, "utf-8");//인코딩 해주는 코드
    String urlAuthor = URLEncoder.encode(author, "utf-8");
    
-   response.sendRedirect("output.jsp?bookName=" + urlBookName + "&author=" + urlAuthor); // 리다이렉트
+   response.sendRedirect("output.jsp?bookName=" + urlBookName + "&author=" + urlAuthor); 
+   // 리다이렉트 get 방식으로 output.jsp에 보내줌
 %>
 리다이렉트 오류
 </body>

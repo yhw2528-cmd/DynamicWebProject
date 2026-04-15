@@ -9,21 +9,27 @@
 <body>
 <%
 	request.setCharacterEncoding("utf-8");
+
 	String name=request.getParameter("studName");
 	String score=request.getParameter("score");
 	String department=request.getParameter("department");
+	
 	pageContext.setAttribute("studName",name);
 	pageContext.setAttribute("score",score);
 	pageContext.setAttribute("department",department);
+	
 	request.setAttribute("studName",name);
 	request.setAttribute("score",score);
 	request.setAttribute("department",department);
+	
 	session.setAttribute("studName",name);
 	session.setAttribute("score",score);
 	session.setAttribute("department",department);
+	
 	application.setAttribute("studName",name);
 	application.setAttribute("score",score);
 	application.setAttribute("department",department);
+	
 	//response.sendRedirect("output.jsp");
 
 %>
