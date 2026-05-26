@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function printClass() {
+    var classArray = document.getElementsByClassName("depart"); // ✅ 오타 수정 + 메서드명 수정
+    var result = document.getElementById("result");
+    var text = "";
+    for (var i = 0; i < classArray.length; i++) {
+        text += (classArray[i].innerHTML + ":");
+    }
+    result.innerHTML = text;
+}
+
+function printId() {
+    var result = document.getElementById("result");
+    // getElementById는 하나만 반환 → 배열 아님 → for문 불필요
+    var el1 = document.getElementById("id01");
+    var el2 = document.getElementById("id02");
+    result.innerHTML = el1.innerHTML + ":" + el2.innerHTML + ":";
+}
+
+function printTag() {
+    var tagArray = document.getElementsByTagName("p"); // p 태그 전부 찾기
+    var result = document.getElementById("result");
+    var text = "";
+    for (var i = 0; i < tagArray.length; i++) {
+        if (tagArray[i].id === "result") continue; // result 자기 자신은 제외
+        text += (tagArray[i].innerHTML + ":");
+    }
+    result.innerHTML = text;
+}
+
+</script>
+
+<div class="depart">경영학</div><br>
+<div class="depart">컴공</div><br>
+<div class="depart">메카</div><br>
+<div id="id01">윤하원</div><br>
+<div id="id02">이수정</div><br>
+<p id="s01">안산</p>
+<p id="s02">시흥</p>
+<p id="result"></p>
+<button onclick="printClass()">Div class 출력</button>
+<button onclick="printId()">Div id 출력</button>       
+<button onclick="printTag()">tag 출력</button>         
+</body>
+</html>
