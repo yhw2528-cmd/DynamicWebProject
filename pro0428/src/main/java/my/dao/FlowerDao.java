@@ -44,13 +44,14 @@ public class FlowerDao {
                 flower.setFlowerId(rs.getInt(1));
                 flower.setName(rs.getString(2));
                 flower.setOrigin(rs.getString(3));
-                flower.setPrice(rs.getInt(4));         // int로 변경
+                flower.setPrice(rs.getInt(4));         
                 flower.setRegisterDate(rs.getTimestamp(5));
                 flower.setImage(rs.getString(6));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
+        	//jdbcUtil.closer(conn)
             JdbcUtil.close(rs);
             JdbcUtil.close(pstmt);
         }

@@ -31,6 +31,7 @@
 	<option value="4">4개</option>
 </select>
 <input type="submit" value="구매하기">
+<input type="button" onclick="putcart(form)" value="카트담기">
 </form><br><hr><br>
 
 
@@ -38,5 +39,14 @@
 
 </c:if>
 <a href="catalog.jsp">카탈로그 보기</a>
+<script>
+
+function putcart(frm){
+	var amount = frm.amount.value.trim();
+	var flowerid = frm.flowerId.value.trim(); 
+	window.open("putcart.jsp?flowerId="+flowerid+"&amount="+amount,"","width=500, height=300");
+}
+</script>
+
 </body>
 </html>

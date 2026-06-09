@@ -26,6 +26,7 @@ public class PurchaseDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
+        	//jdbcUtil.close(conn);
             JdbcUtil.close(pstmt);          
            
         }
